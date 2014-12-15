@@ -42,7 +42,11 @@ public:
 				for (int n = 0; n < f.size(); n++)
 				{
 					ofVec3f &v = f[n];
-					ofVec3f f = 0;
+                    //					ofVec3f f(0,0,0);
+                    ofVec3f f;
+                    f.set(0.0, 0.0, 0.0);
+                    
+                    
 					
 					// gravity
 					f.y -= 2.5 * (1 - sin(pow(delta, 2) * PI));

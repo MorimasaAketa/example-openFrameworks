@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D4DB5B43-8EC4-4F51-8471-B7A19859C3D7</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5F5760DC1D7D368197EA46F58434F82594C6401E</key>
+		<string>https://github.com/obviousjim/ofxSTL.git</string>
+		<key>9A1318A936EC2980F1D4E00A09FB53DC0E41ED7B</key>
+		<string>https://github.com/MorimasaAketa/ofxMarchingCubes.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5F5760DC1D7D368197EA46F58434F82594C6401E</key>
+		<string>ofxSTL/</string>
+		<key>9A1318A936EC2980F1D4E00A09FB53DC0E41ED7B</key>
+		<string>ofxMarchingCubes/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/obviousjim/ofxSTL.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5F5760DC1D7D368197EA46F58434F82594C6401E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9A1318A936EC2980F1D4E00A09FB53DC0E41ED7B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxMarchingCubes</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5F5760DC1D7D368197EA46F58434F82594C6401E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxSTL</string>
+		</dict>
+	</array>
+</dict>
+</plist>
