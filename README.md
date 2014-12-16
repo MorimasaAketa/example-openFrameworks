@@ -10,7 +10,7 @@ You need to download real Perfume motion capture data and sound file from perfum
 
 http://perfume-global.com/visualization.html
 
-When you lay cursor on upper left of the page, you will find the link to data.
+When you lay cursor on upper left of the page, you will find the 'DOWNLOAD' link to data.
 
 Real motion capture data, .bvh files should be placed in bin/data/bvhfiles of each project directory.
 
