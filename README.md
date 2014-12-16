@@ -1,7 +1,7 @@
 example-openFrameworks
 ======================
 
-Perfume-dev project fork.
+Perfume-dev #001 project fork.
 
 Update project settings and modify just some code in order 
 to work with openFrameworks v0.8.4 in XCode 6.1.
