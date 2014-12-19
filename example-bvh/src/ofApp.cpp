@@ -2,24 +2,22 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofSetFrameRate(60); //フレームレートを60fpsに設定
-	ofSetVerticalSync(true); //垂直同期を設定
+	ofSetFrameRate(60);
+    ofSetVerticalSync(true);
 	
-	ofBackground(0); //背景を真っ黒に設定
+	ofBackground(0);
 	
-	bvh.resize(3); //ofxBvhのベクター型bvhの個数を3に設定する
+	bvh.resize(3);
 	
 	// setup bvh
-	bvh[0].load("A_test.bvh"); // bvhの0番目にA_test.bvhを読み込む
-	bvh[1].load("B_test.bvh"); // bvhの1番目にB_test.bvhを読み込む
-	bvh[2].load("C_test.bvh"); // bvhの2番目にC_test.bvhを読み込む
-    
-    // bvh.size()は3を返す。
+	bvh[0].load("A_test.bvh");
+	bvh[1].load("B_test.bvh");
+	bvh[2].load("C_test.bvh");
     
 	for (int i = 0; i < bvh.size(); i++)
 	{
-		bvh[i].play();        // bvh[i]のplay()メソッドを実行する。
-		bvh[i].setLoop(true); // bvh[i]のsetLoop(true)メソッドを実行する
+		bvh[i].play();
+		bvh[i].setLoop(true);
 	}
 }
 
@@ -28,25 +26,24 @@ void ofApp::update()
 {
 	for (int i = 0; i < bvh.size(); i++)
 	{
-		bvh[i].update(); // bvh[i]を更新する
+		bvh[i].update();
 	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	glEnable(GL_DEPTH_TEST); // 3Dグラフィックスモード GLを開始
+	glEnable(GL_DEPTH_TEST);
 
-    // 3Dグラフィックスのブレンドモードを設定
 	ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 
-    cam.begin();    // 画面に描画するカメラを開始
+    cam.begin();
 	
 	for (int i = 0; i < bvh.size(); i++)
 	{
-		bvh[i].draw(); // bvh[i]のdrawメソッドを実行
+		bvh[i].draw();
 	}
 	
-	cam.end();        //カメラを終了
+	cam.end();
 
 }
 

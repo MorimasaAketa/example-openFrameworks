@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxBvh.h" // アドオン、ofxBvhを使用する
+#include "ofxBvh.h"
 
 class ofApp : public ofBaseApp{
 
@@ -20,7 +20,7 @@ class ofApp : public ofBaseApp{
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 	
-	vector<ofxBvh> bvh; // ofxBvhのベクター型bvhを宣言する。
-	ofEasyCam cam; // 3D視点を簡単に切り替えるためのofEasyCamクラスのオブジェクトcam
+	vector<ofxBvh> bvh;
+	ofEasyCam cam;
 	
 };
