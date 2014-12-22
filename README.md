@@ -14,6 +14,6 @@ When you lay cursor on upper left of the page, you will find the 'DOWNLOAD' link
 
 Real motion capture data, .bvh files should be placed in bin/data/bvhfiles of each project directory.
 
-Sound file, .wav file shoud be placed in bin/ directory.
+Sound file, .wav file shoud be placed in bin/data directory.
 
 
