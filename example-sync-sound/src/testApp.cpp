@@ -1,4 +1,4 @@
-#include "testApp.h"
+﻿#include "testApp.h"
 
 class Tracker // 点を追跡するtrackerクラス
 {
@@ -148,7 +148,7 @@ void testApp::draw(){
 		ofFill();
 		
 		// draw ground 地面を描画
-		ofPushMatrix();　// 現在の座標位置を保存
+		ofPushMatrix(); // 現在の座標位置を保存
 		ofRotate(90, 1, 0, 0); // 回転
 		ofLine(100, 0, -100, 0); // 線
 		ofLine(0, 100, 0, -100); // 線
@@ -173,7 +173,7 @@ void testApp::draw(){
 	ofPopMatrix(); //先にpushして積んだ今の座標位置を取り出して戻す
 	
 	ofSetColor(255); // 色を白に
-	ofDrawBitmapString("press any key to scratch\nplay_rate: " + ofToString(play_rate, 1), 10, 20);　// 文字の表示
+	ofDrawBitmapString("press any key to scratch\nplay_rate: " + ofToString(play_rate, 1), 10, 20); // 文字の表示
 }
 
 //--------------------------------------------------------------
