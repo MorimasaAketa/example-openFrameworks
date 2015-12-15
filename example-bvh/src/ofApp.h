@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "ofMain.h"
 #include "ofxBvh.h" // アドオン、ofxBvhを使用する
