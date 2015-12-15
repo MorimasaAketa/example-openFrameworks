@@ -1,10 +1,12 @@
-example-openFrameworks
+perfume-bvh-oF
 ======================
 
-Perfume-dev #001 project fork.
+This is a Perfume-dev #001's fork.
 
-Update project settings and modify just some code in order 
-to work with openFrameworks v0.8.4 in XCode 6.1.
+I Updated project settings and modified some code 
+to work with openFrameworks v0.8.4 in XCode 7.2.
+
+Some projects contains VS2012 project files.
 
 You need to download real Perfume motion capture data and sound file from perfume-global site.
 
