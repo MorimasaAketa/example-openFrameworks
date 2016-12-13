@@ -185,13 +185,13 @@ void ofxBvh::draw()
 		{
 			ofSetColor(ofColor::yellow);
 			billboard();
-			ofCircle(0, 0, 6);
+			ofDrawCircle(0, 0, 6);
 		}
 		else if (o->getChildren().size() == 1)
 		{
 			ofSetColor(ofColor::white);		
 			billboard();
-			ofCircle(0, 0, 2);
+			ofDrawCircle(0, 0, 2);
 		}
 		else if (o->getChildren().size() > 1)
 		{
@@ -201,7 +201,7 @@ void ofxBvh::draw()
 				ofSetColor(ofColor::green);
 			
 			billboard();
-			ofCircle(0, 0, 4);
+			ofDrawCircle(0, 0, 4);
 		}
 		
 		glPopMatrix();
