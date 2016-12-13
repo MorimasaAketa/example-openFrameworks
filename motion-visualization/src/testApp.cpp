@@ -17,11 +17,12 @@ public:
 	
 	void update() {
 		const ofVec3f &p = joint->getPosition();
-		
-		if (p.distance(points.front()) > 1)
-			points.push_front(joint->getPosition());
-		
-		if (points.size() > trackerLength){
+        
+        if (points.size() == 0 || p.distance(points.front()) > 1) {
+            points.push_front(joint->getPosition());
+        }
+
+        if (points.size() > trackerLength){
 			points.pop_back();
 		}
 	}
@@ -40,7 +41,7 @@ public:
 			if (dist < 40) {
 				ofSetLineWidth(ofMap(dist, 0, 30, 0, 14));
 				ofSetColor(dist*20, 127-dist*10, 255-dist*20);
-				ofLine(p0.x, p0.y, p0.z, p1.x, p1.y, p1.z);
+				ofDrawLine(p0.x, p0.y, p0.z, p1.x, p1.y, p1.z);
 			}
 		}		
 	}
@@ -72,7 +73,7 @@ void testApp::setup() {
 		bvh[i].play();
 	}
 	
-	track.loadSound("Perfume_globalsite_sound.wav");
+	track.load("Perfume_globalsite_sound.wav");
 	track.play();
 	track.setLoop(true);
 	
@@ -94,7 +95,7 @@ void testApp::setup() {
 	camera.setDistance(360);
 	camera.disableMouseInput();
 	
-	background.loadImage("background.png");
+	background.load("background.png");
 	
 }
 
