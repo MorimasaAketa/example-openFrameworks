@@ -4,11 +4,11 @@ perfume-bvh-oF
 This is a Perfume-dev #001's fork.
 
 I Updated project settings and modified some code 
-to work with openFrameworks v0.9.x in XCode 7.2, OS X 10.10.
+to work with openFrameworks v0.9.x in XCode 7.2, OS X 10.10 or later.
 
-Some projects contains VS2012 project files.
+All Projects contains VS2015 project files, so you can build in windows immediately except for 'marchin-cubes' example.
 
-You need to download real Perfume motion capture data and sound file from perfume-global site.
+You need to download Perfume's real motion capture data and sound file from perfume-global site.
 
 http://perfume-global.com/visualization.html
 
