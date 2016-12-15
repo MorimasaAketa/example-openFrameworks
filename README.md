@@ -31,7 +31,7 @@ Sound file, .wav file shoud be placed in bin/data directory.
 1. Install Visual Studio Community 2015 with C++ component.
 2. Download openFrameworks 0.9.8 or later for Visual Studio from [official site](http://openframeworks.cc/download/) .
 3. Clone or "download zip" and extract this repository to folder `of_0.9.8_vs_release/apps/`. 
-4. Copy ofxBvh folder from `of_0.9.8_vs_release/apps/perfume-bvh-oF` to `of_0.9.8_vs_release/addons/` .
+4. Copy ofxBvh folder from `of_0.9.8_vs_release/apps/perfume-bvh-oF/` to `of_0.9.8_vs_release/addons/` .
 5. Open `example-bvh/example-bvh.sln` . and push 'Local Windows Debugger' button.
 
 
