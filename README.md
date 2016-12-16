@@ -3,14 +3,15 @@ perfume-bvh-oF
 
 This is a Perfume-dev #001's fork.
 
-I Updated project settings and modified some code 
+I updated project settings and modified some code 
 to work with openFrameworks v0.9.x in XCode 7.2, OS X 10.10 or later.
 
-All Projects contains VS2015 project files, so you can build in windows immediately except for 'marchin-cubes' example.
+As all projects contains VS2015 project setting files, you can build on windows immediately except for 'marchin-cubes' example.
 
-You need to download Perfume's real motion capture data and sound file from perfume-global site.
+You need to download Perfume's real motion capture data and sound file from perfume-global site in order to build and execute except for `example-bvh`. 
 
 http://perfume-global.com/visualization.html
+
 
 When you lay cursor on upper left of the page, you will find the 'DOWNLOAD' link to data.
 
@@ -18,7 +19,9 @@ Real motion capture data, .bvh files should be placed in bin/data/bvhfiles of ea
 
 Sound file, .wav file shoud be placed in bin/data directory.
 
-# Basic setup for OS X
+Only `example-bvh` does not need other data, it is independent project.
+
+# Basic setup steps for OS X
 
 1. Install XCode.
 2. Download openFrameworks 0.9.8 or later from [official site](http://openframeworks.cc/download/) .
@@ -26,7 +29,7 @@ Sound file, .wav file shoud be placed in bin/data directory.
 4. Copy ofx* folders ( ofxBvh, ofxMarchingCubes, ofxSTL ) from `of_0.9.8_osx_release/apps/perfume-bvh-oF` to `of_0.9.8_osx_release/addons/` .
 5. Open `example-bvh/example-bvh.xcodeproj` and build.
 
-# Basic setup for Windows/Visual Studio 2015
+# Basic setup steps for Windows/Visual Studio 2015
 
 1. Install Visual Studio Community 2015 with C++ component.
 2. Download openFrameworks 0.9.8 or later for Visual Studio from [official site](http://openframeworks.cc/download/) .
