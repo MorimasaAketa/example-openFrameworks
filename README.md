@@ -4,7 +4,7 @@ perfume-bvh-oF
 This is a Perfume-dev #001's fork.
 
 I updated project settings and modified some code 
-to work with openFrameworks v0.9.x in XCode 7.2, OS X 10.10 or later.
+to work with openFrameworks v0.9.x in XCode 8.2 and macOS 10.12, or in Windows and Visual Studio 2015.	
 
 As all projects contains VS2015 project setting files, you can build on windows immediately except for 'marchin-cubes' example.
 
