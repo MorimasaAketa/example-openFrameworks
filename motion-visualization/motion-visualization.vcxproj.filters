@@ -7,7 +7,7 @@
     <ClCompile Include="..\..\..\addons\ofxBvh\src\ofxBvh.cpp">
       <Filter>addons\ofxBvh\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\testApp.cpp">
+    <ClCompile Include="src\ofApp.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +29,7 @@
     <ClInclude Include="..\..\..\addons\ofxBvh\src\ofxBvh.h">
       <Filter>addons\ofxBvh\src</Filter>
     </ClInclude>
-    <ClInclude Include="src\testApp.h">
+    <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
