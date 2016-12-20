@@ -1,4 +1,4 @@
-﻿#include "testApp.h"
+﻿#include "ofApp.h"
 
 class Tracker // 点を追跡するtrackerクラス
 {
@@ -59,7 +59,7 @@ vector<Tracker*> trackers; // グローバルにtrakerクラスのベクター�
 const float trackDuration = 64.28; // 定数 trackDurationを設定
 
 //--------------------------------------------------------------
-void testApp::setup()
+void ofApp::setup()
 {
 	ofSetFrameRate(60); //フレームレートを60fpsに設定
 	ofSetVerticalSync(true);
@@ -104,7 +104,7 @@ void testApp::setup()
 }
 
 //--------------------------------------------------------------
-void testApp::update()
+void ofApp::update()
 {
 	rotate += 0.1; // 回転量rotateに0.1を加算
 	
@@ -128,7 +128,7 @@ void testApp::update()
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
+void ofApp::draw(){
     glEnable(GL_DEPTH_TEST); // gl描画開始
 	
 	ofEnableBlendMode(OF_BLENDMODE_ALPHA);
@@ -178,44 +178,44 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 //キーを押していたら
-void testApp::keyPressed(int key){
+void ofApp::keyPressed(int key){
 	play_rate_t = -1; // play_rate_tを-1に
 }
 
 //--------------------------------------------------------------
 //キーを押していなかったら
-void testApp::keyReleased(int key){
+void ofApp::keyReleased(int key){
 	play_rate_t = 1; // play_rate_tを1に
 }
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
+void ofApp::mouseMoved(int x, int y ){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
+void ofApp::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
+void ofApp::mouseReleased(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
+void ofApp::windowResized(int w, int h){
 }
 
 //--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg){
+void ofApp::gotMessage(ofMessage msg){
 
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){ 
 }

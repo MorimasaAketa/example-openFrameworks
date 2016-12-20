@@ -3,13 +3,12 @@
 #include "ofMain.h"
 #include "ofxBvh.h"
 
-class testApp : public ofBaseApp{
+class ofApp : public ofBaseApp{
 
   public:
 	void setup();
 	void update();
 	void draw();
-	void exit();
 
 	void keyPressed  (int key);
 	void keyReleased(int key);
@@ -20,13 +19,10 @@ class testApp : public ofBaseApp{
 	void windowResized(int w, int h);
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
-		
+	
 	ofSoundPlayer track;
-	ofxBvh bvh[3];
+	vector<ofxBvh> bvh;
 	
-	float rotate;
-	float play_rate, play_rate_t;
-	
-	ofEasyCam camera;
-	ofImage background;
+	ofCamera cam;
+	ofLight light;
 };
