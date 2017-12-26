@@ -84,7 +84,9 @@ protected:
 	ofxMCGridPoints gridPoints;
 	
 	void vertexInterp(float isoLevel,const ofPoint& p1, const ofPoint& p2, float valp1, float valp2, ofPoint& theVertice);
-	void polygonise(uint i, uint j, uint k, bool bCalcNormals);
+	//void polygonise(uint64_t i, uint64_t j, uint64_t k, bool bCalcNormals);
+	void polygonise(unsigned int i, unsigned int j, unsigned int k, bool bCalcNormals);
+
 };
 
 
