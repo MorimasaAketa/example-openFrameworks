@@ -1,4 +1,4 @@
-﻿#include "ofApp.h"
+#include "ofApp.h"
 
 class Tracker // 点を追跡するtrackerクラス
 {
@@ -63,7 +63,6 @@ void ofApp::setup()
 {
 	ofSetFrameRate(60); //フレームレートを60fpsに設定
 	ofSetVerticalSync(true);
-	
 	ofBackground(0); // 背景を黒に
 	
 	play_rate = play_rate_t = 1; // play_rate, play_rateを1に
