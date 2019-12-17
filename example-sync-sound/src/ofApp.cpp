@@ -1,4 +1,4 @@
-#include "ofApp.h"
+﻿#include "ofApp.h"
 
 class Tracker // 点を追跡するtrackerクラス
 {
