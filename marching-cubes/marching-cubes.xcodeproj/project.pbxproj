@@ -429,21 +429,6 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
-			<key>DA17B9E0FBB6F4E4A873E65B</key>
-			<dict>
-				<key>explicitFileType</key>
-				<string>sourcecode.c.h</string>
-				<key>fileEncoding</key>
-				<string>4</string>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>name</key>
-				<string>MetaBall.h</string>
-				<key>path</key>
-				<string>src/MetaBall.h</string>
-				<key>sourceTree</key>
-				<string>SOURCE_ROOT</string>
-			</dict>
 			<key>6948EE371B920CB800B5AC1A</key>
 			<dict>
 				<key>children</key>
@@ -549,6 +534,8 @@ IFS=$(echo -en "\n\b")
 # Loop through all items.
 for ITEM in $ITEMS;
 do
+echo "Stripping invalid archs '${ITEM}'"
+lipo -extract x86_64 "${ITEM}" -o "${ITEM}"
 echo "Signing '${ITEM}'"
 codesign --force --verbose --sign "${CODE_SIGN_IDENTITY_FOR_ITEMS}" --entitlements "${CODE_SIGN_ENTITLEMENTS}" "${ITEM}"
 RESULT=$?
@@ -609,7 +596,6 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
-						<string>src</string>
 						<string>../../../addons/ofxBvh/src</string>
 						<string>../../../addons/ofxMarchingCubes/src</string>
 						<string>../../../addons/ofxSTL/src</string>
@@ -617,10 +603,11 @@ fi
 					</array>
 					<key>MACOSX_DEPLOYMENT_TARGET</key>
 					<string>10.9</string>
+					<key>OTHER_CODE_SIGN_FLAGS</key>
+					<string>--deep</string>
 					<key>OTHER_CPLUSPLUSFLAGS</key>
 					<array>
 						<string>-D__MACOSX_CORE__</string>
-						<string>-mtune=native</string>
 					</array>
 					<key>SDKROOT</key>
 					<string>macosx</string>
@@ -653,7 +640,6 @@ fi
 					<key>HEADER_SEARCH_PATHS</key>
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
-						<string>src</string>
 						<string>src</string>
 						<string>../../../addons/ofxBvh/src</string>
 						<string>../../../addons/ofxMarchingCubes/src</string>
@@ -3462,7 +3448,6 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
-						<string>src</string>
 						<string>../../../addons/ofxBvh/src</string>
 						<string>../../../addons/ofxMarchingCubes/src</string>
 						<string>../../../addons/ofxSTL/src</string>
@@ -3472,10 +3457,11 @@ fi
 					<string>10.9</string>
 					<key>ONLY_ACTIVE_ARCH</key>
 					<string>YES</string>
+					<key>OTHER_CODE_SIGN_FLAGS</key>
+					<string>--deep</string>
 					<key>OTHER_CPLUSPLUSFLAGS</key>
 					<array>
 						<string>-D__MACOSX_CORE__</string>
-						<string>-mtune=native</string>
 					</array>
 					<key>SDKROOT</key>
 					<string>macosx</string>
@@ -3527,7 +3513,6 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
-						<string>src</string>
 						<string>../../../addons/ofxBvh/src</string>
 						<string>../../../addons/ofxMarchingCubes/src</string>
 						<string>../../../addons/ofxSTL/src</string>
@@ -3535,10 +3520,11 @@ fi
 					</array>
 					<key>MACOSX_DEPLOYMENT_TARGET</key>
 					<string>10.9</string>
+					<key>OTHER_CODE_SIGN_FLAGS</key>
+					<string>--deep</string>
 					<key>OTHER_CPLUSPLUSFLAGS</key>
 					<array>
 						<string>-D__MACOSX_CORE__</string>
-						<string>-mtune=native</string>
 					</array>
 					<key>SDKROOT</key>
 					<string>macosx</string>
@@ -3659,7 +3645,6 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
-						<string>src</string>
 						<string>../../../addons/ofxBvh/src</string>
 						<string>../../../addons/ofxMarchingCubes/src</string>
 						<string>../../../addons/ofxSTL/src</string>
@@ -3715,7 +3700,6 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
-						<string>src</string>
 						<string>../../../addons/ofxBvh/src</string>
 						<string>../../../addons/ofxMarchingCubes/src</string>
 						<string>../../../addons/ofxSTL/src</string>
@@ -3758,7 +3742,6 @@ fi
 					<string>E4B69E1D0A3A1BDC003C02F2</string>
 					<string>E4B69E1E0A3A1BDC003C02F2</string>
 					<string>E4B69E1F0A3A1BDC003C02F2</string>
-					<string>DA17B9E0FBB6F4E4A873E65B</string>
 				</array>
 				<key>isa</key>
 				<string>PBXGroup</string>
@@ -3860,8 +3843,9 @@ fi
 # Copy default icon file into App/Resources
 rsync -aved "$ICON_FILE" "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/"
 # Copy libfmod and change install directory for fmod to run
-rsync -aved "$OF_PATH/libs/fmodex/lib/osx/libfmodex.dylib" "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/";
-install_name_tool -change @executable_path/libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME";
+rsync -aved "$OF_PATH/libs/fmod/lib/osx/libfmod.dylib" "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/";
+# Not needed as we now call install_name_tool -id @loader_path/../Frameworks/libfmod.dylib libfmod.dylib on the dylib directly which prevents the need for calling every post build - keeping here for reference and possible legacy usage 
+# install_name_tool -change @rpath/libfmod.dylib @executable_path/../Frameworks/libfmod.dylib "$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME";
 
 echo "$GCC_PREPROCESSOR_DEFINITIONS";
 </string>
