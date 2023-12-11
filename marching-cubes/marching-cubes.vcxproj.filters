@@ -7,6 +7,12 @@
 		<ClCompile Include="src\main.cpp">
 			<Filter>src</Filter>
 		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
 		<ClCompile Include="..\..\..\addons\ofxBvh\src\ofxBvh.cpp">
 			<Filter>addons\ofxBvh\src</Filter>
 		</ClCompile>
@@ -25,31 +31,37 @@
 			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons">
-			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+			<UniqueIdentifier>{81DD5DE0--AA7-0-47-93-9-892-882D82ED0AA5}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxBvh">
-			<UniqueIdentifier>{3B9A6E70-C304-47E3-2B54-9D61}</UniqueIdentifier>
+			<UniqueIdentifier>{9A6629DA--80B-6-4A-23-B-91F-8CBE78B072F5}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxBvh\src">
-			<UniqueIdentifier>{0796B04A-50EE-088C-DF1E-E044}</UniqueIdentifier>
+			<UniqueIdentifier>{A9B42C31--E97-B-42-63-A-E82-7938BC572CA6}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxMarchingCubes">
-			<UniqueIdentifier>{CAF5338A-42E9-18A4-F7A9-8256}</UniqueIdentifier>
+			<UniqueIdentifier>{454E0918--AD6-B-46-EE-B-492-2AF6BC1B019D}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxMarchingCubes\src">
-			<UniqueIdentifier>{12A4EC1C-14FE-E37B-88CF-2C00}</UniqueIdentifier>
+			<UniqueIdentifier>{85FED7D7--A14-0-42-25-9-7DF-837A006D4BCF}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxSTL">
-			<UniqueIdentifier>{01C549D5-DD98-B5F7-E21A-669E}</UniqueIdentifier>
+			<UniqueIdentifier>{B7678B55--53E-D-43-31-A-D94-F59422073A76}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxSTL\src">
-			<UniqueIdentifier>{A504D4D1-805B-D3B7-3A56-F47F}</UniqueIdentifier>
+			<UniqueIdentifier>{3A06D1F8--A7C-C-4A-32-A-209-035DFEC71484}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="addons\ofxSTL\src\utils">
-			<UniqueIdentifier>{AF4C7CAF-9012-6345-55B9-EDB0}</UniqueIdentifier>
+			<UniqueIdentifier>{ED425D7A--62D-6-4B-B0-B-04D-D3CE58E56232}</UniqueIdentifier>
 		</Filter>
 	</ItemGroup>
 	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\MetaBall.h">
+			<Filter>src</Filter>
+		</ClInclude>
 		<ClInclude Include="src\ofApp.h">
 			<Filter>src</Filter>
 		</ClInclude>
